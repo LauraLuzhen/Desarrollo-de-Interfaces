@@ -1,4 +1,2 @@
 import PeopleList from "./Views/PeopleList";
-export default function App() {
-  return <PeopleList />;
-}
+export default PeopleList;
