@@ -1,39 +1,45 @@
-import React, { useState } from 'react';
+import { View, Text, ImageBackground, Image, StyleSheet } from "react-native";
+import { Link, useRouter } from "expo-router";
+import FormularioLogin from "./components/FormularioLogin";
+import BotonRedondeado from "./components/BotonRedondeado";
 
-// ====================================================================
-// --- COMPONENTES REUTILIZABLES (Originalmente en login.tsx) ---
-// ====================================================================
-
-/**
- * Props para el Botón Personalizado.
- */
-type ButtonProps = {
-  text: string;
-  onClick: () => void;
-  primary?: boolean;
-};
-
-/**
- * Componente BotonPersonalizado
- * Simula un pressable con bordes redondeados y texto configurable.
- */
-const BotonPersonalizado: React.FC<ButtonProps> = ({ text, onClick, primary = true }) => {
-  const baseStyle = "w-full py-3 rounded-xl font-bold transition-colors duration-200 shadow-md";
-  const primaryStyle = "bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300";
+export default function Login() {
+  const router = useRouter();
 
   return (
-    <button
-      onClick={onClick}
-      className={`${baseStyle} ${primaryStyle}`}
-    >
-      {text}
-    </button>
+    <ImageBackground source={require("../assets/images/fondo.jpg")} style={styles.fondo}>
+      <View style={styles.contenido}>
+        <Image source={require("../assets/images/logo.png")} style={styles.logo} />
+        <FormularioLogin />
+        <BotonRedondeado texto="Entrar" onPress={() => router.push("./home")} />
+        <Link href="./register" style={styles.link}>
+          ¿No tienes cuenta? <Text style={styles.linkTexto}>Regístrate</Text>
+        </Link>
+      </View>
+    </ImageBackground>
   );
-};
+}
 
-/**
- * Props para el Contenedor de Formulario.
- */
-type ContainerProps = {
-  children: React.ReactNode;
-};
+const styles = StyleSheet.create({
+  fondo: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center",
+  },
+  contenido: {
+    alignItems: "center",
+    paddingHorizontal: 20,
+  },
+  logo: {
+    width: 100,
+    height: 100,
+    marginBottom: 20,
+  },
+  link: {
+    marginTop: 15,
+  },
+  linkTexto: {
+    color: "#f57c00",
+    fontWeight: "bold",
+  },
+});
