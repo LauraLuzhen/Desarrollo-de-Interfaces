@@ -1,0 +1,122 @@
+/app
+	/core
+		container.ts
+		types.ts
+	/data
+		/connection
+			Connection.ts
+		/repositories
+			PersonaRepositoryAzure.ts 
+				implements IPersonaRepository
+				+ getAll()
+				+ getOne(id int)
+				+ create()
+				+ update(id int)
+				+ delete(id int)
+			DepartamentosRepositoryAzure.ts
+				implements IDepartamentoRepository
+				+ getAll()
+				+ getOne(id int)
+				+ create()
+				+ update(id int)
+				+ delete(id int)
+	/domain
+		/entities
+			Persona.ts
+				+ id int { get }
+				+ nombre string { get; set }
+				+ apellidos string { get; set }
+				+ telefono int { get; set }
+				+ direccion string { get; set }
+				+ fechanacimiento datetime { get; set }
+				+ idDepartamneto int { get; set }
+				+ fotoURL string { get; set }
+				+ Persona()
+				+ Persona(id int, nombre string, apellidos string)
+				+ Persona(id int, nombre string, apellidos string telefono int, direccion string, fechanacimiento datetime, idDepartamneto int, fotoURL strig)
+			Departamento.ts
+				+ id int { get }
+				+ nombre string { get; set }
+				+ Departamento()
+				+ Departamento(id int, nombre string)
+		/usecases
+			ListarPersonasUseCase.ts
+				implements IListarPersonasUseCase
+				inyección IPersonaRepository
+				# Viernes y sábados personas mayores de 18 años
+			ListarDepartamentosUseCase.ts
+				implements IListarDepartamentosUseCase
+				inyección IDepartamentoRepository
+			EditarCrearPersonaUseCase.ts
+				implements IEditarPersonaUseCase, ICrearPersonaUseCase
+				inyección IPersonaRepository
+				# No se pueden crear dos personas iguales
+			EditarCrearDepartamentoUseCase.ts
+				implements IEditarDepartamnetoUseCase, ICrearDepartamentoUseCase
+				inyección IDepartamentoRepository
+				# No se pueden crear dos departamentos iguales
+			EliminarPersonaUseCase.ts
+				implements IEliminarPersonaUseCase
+				inyección IPersonaRepository
+				# No se puede eliminar si es domingo
+				# Si se puede eliminar advertencia
+			EliminarDepartamentoUseCase.ts
+				implements IEliminarDepartamentoUseCase
+				inyección IDepartamentoRepository
+				# Si hay personas en el departamento advertencia y cantidad que hay
+		/interfaces
+			/repositories
+				IPersonaRepository.ts
+					+ getAll()
+					+ getOne(id int)
+					+ create()
+					+ update(id int)
+					+ delete(id int)
+				IDepartamentoRepository.ts
+					+ getAll()
+					+ getOne(id int)
+					+ create()
+					+ update(id int)
+					+ delete(id int)
+
+			/usecases
+				/persona
+					IListarPersonasUseCase.ts
+						+ listarPersonas() 
+					IEditarPersonaUseCase.ts
+						+ editarPersona()
+					ICrearPersonaUseCase.ts
+						+ crearPersona()
+					IEliminarPersonaUseCase.ts
+						+ eliminarPersona()
+				/departamento
+					IListarDepartamentossUseCase.ts
+						+ listarDepartamentos()
+					IEditarDeparamentoUseCase.ts
+						+ ediarDepartamento()
+					ICrearDepartamentoUseCase.ts
+						+ crearDepartamento()
+					IEliminarDepartmentoUseCase.ts
+						+ eliminar Departamento()
+	/ui
+		/model
+		/viewmodel
+			HomeVM.ts
+			/persona
+				ListadoPersonasVM.ts
+					inyección IListadoPersonasUseCase, IEliminarPersonaUseCase
+				EditarCrearPersonaVM.ts
+					inyección IEditarPersonaUseCase, ICrearPersonaUseCase
+			/departamento
+				ListadoDepartamentosVM.ts
+					inyección IListadoDepartamentosUseCase, IEliminarDepartamentoUseCase
+				EditarCrearDepartamentoVM.ts
+					inyección IEditarDepartamentoUseCase, ICrearDepartamentoUseCase
+		/view
+			HomeView.tsx
+			/persona
+				ListadoPersonaView.tsx
+				EditarCrearPersonaView.tsx
+			/departamento
+				ListadoDepartamentoView.tsx
+				EditarCrearDepartamentoView.tsx
