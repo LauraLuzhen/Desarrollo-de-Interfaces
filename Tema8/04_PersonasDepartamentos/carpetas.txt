@@ -34,7 +34,7 @@
                 + Persona()
                 + Persona(id int, nombre string, apellidos string)
                 + Persona(id int, nombre string, apellidos string telefono int, direccion string, fechanacimiento datetime, idDepartamneto int, fotoURL strig)
-            Departamento.ts
+            Departamento.ts 
                 + id int { get }
                 + nombre string { get; set }
                 + Departamento()
@@ -61,12 +61,14 @@
             GetListPersonaUseCase.ts
                 implements IGetListPersonaUseCase
                 inyección IPersonaRepository
+                # Listar personas mayores de edad los viernes y sábados
             UpdateCreatePersonaUseCase.ts
                 implements IUpdatePersonaUseCase, ICreatePersonaUseCase
                 inyección IPersonaRepository
             DeletePersonaUseCase.ts
                 implements IDeletePersonaUseCase
                 inyección IPersonaRepository
+                # Domingos no se puede eliminar a una persona advertir en la vista si no se puede
             GetListDepartamentoUseCase.ts
                 implements IGetListDepartamentoUseCase
                 inyección IDepartamentoRepository
@@ -99,21 +101,13 @@
             PersonaUIModel.ts
             DepartamentoUIModel.ts
         /viewmodel
-            /persona
-                GetListPersonaVM.ts
-                UpdateCreatePersonaVM.ts
-            /departamento
-                GetListDepartamentoVM.ts
-                UpdateCreateDepartamentoVM.ts
+            PersonaVM.ts    (utilizar singleton)
+            Departamento.ts (utilizar singleton)
         /view
             /screens
-                Index.ts
-                /persona
-                    ListadoPersonas.tsx
-                    EditarCrearPersona.tsx
-                /departamento
-                    ListadoDepartamentos.tsx
-                    EditarCrearDepartamento.tsx
+                Index.tsx
+                PersonaView.tsx
+                DepartamentoView.tsx
             /components
                 /persona
                     PersonaListItem.ts
