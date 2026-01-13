@@ -1,0 +1,121 @@
+/app
+    /core
+        container.ts
+        types.ts
+    /data
+        /connection
+            Connection.ts
+        /repositories
+            PersonaRepositoryAzure.ts 
+                implements IPersonaRepository
+                + getAll()
+                + getOne(id int)
+                + create()
+                + update(id int)
+                + delete(id int)
+            DepartamentosRepositoryAzure.ts
+                implements IDepartamentoRepository
+                + getAll()
+                + getOne(id int)
+                + create()
+                + update(id int)
+                + delete(id int)
+    /domain
+        /entities
+            Persona.ts
+                + id int { get }
+                + nombre string { get; set }
+                + apellidos string { get; set }
+                + telefono int { get; set }
+                + direccion string { get; set }
+                + fechanacimiento datetime { get; set }
+                + idDepartamneto int { get; set }
+                + fotoURL string { get; set }
+                + Persona()
+                + Persona(id int, nombre string, apellidos string)
+                + Persona(id int, nombre string, apellidos string telefono int, direccion string, fechanacimiento datetime, idDepartamneto int, fotoURL strig)
+            Departamento.ts
+                + id int { get }
+                + nombre string { get; set }
+                + Departamento()
+                + Departamento(id int, nombre string)
+        /dtos
+            PersonaDTO.ts
+                + id int { get }
+                + nombre string { get; set }
+                + apellidos string { get; set }
+                + telefono int { get; set }
+                + direccion string { get; set }
+                + fechanacimiento datetime { get; set }
+                + idDepartamneto int { get; set }
+                + fotoURL string { get; set }
+                + nombreDepartamento string { get; set }
+                + PersonaDTO()
+                + Persona(id int, nombre string, apellidos string telefono int, direccion string, fechanacimiento datetime, idDepartamneto int, fotoURL strig, nombreDepartamento string)
+            DepartamentoDTO.ts
+                + id int { get }
+                + nombre string { get; set }
+                + Departamento()
+                + Departamento(id int, nombre string)
+        /usecases
+            GetListPersonaUseCase.ts
+                implements IGetListPersonaUseCase
+                inyección IPersonaRepository
+            UpdateCreatePersonaUseCase.ts
+                implements IUpdatePersonaUseCase, ICreatePersonaUseCase
+                inyección IPersonaRepository
+            DeletePersonaUseCase.ts
+                implements IDeletePersonaUseCase
+                inyección IPersonaRepository
+            GetListDepartamentoUseCase.ts
+                implements IGetListDepartamentoUseCase
+                inyección IDepartamentoRepository
+            UpdateCreateDepartamentoUseCase.ts
+                implements IUpdateDepartamentoUseCase, ICreateDepartamentoUseCase
+                inyección IDepartamentoRepository
+            DeleteDepartamentoUseCase.ts
+                implements IDeleteDepartamentoUseCase
+                inyección IDepartamentoRepository
+        /interfaces
+            /repositories
+                IPersonaRepository.ts
+                IDepartamentoRepository.ts
+            /usecases
+                /persona
+                    IGetListPersonaUseCase.ts
+                    IUpdatePersonaUseCase.ts
+                    ICreatePersonaUseCase.ts
+                    IDeletePersonaUseCase.ts
+                /departamento
+                    IGetListDepartamentoUseCase.ts
+                    IUpdateDepartamentoUseCase.ts
+                    ICreateDepartamentoUseCase.ts
+                    IDeleteDepartamentoUseCase.ts
+        /api
+            PersonaAPI.ts
+            Departamento.ts
+    /ui
+        /model
+            PersonaUIModel.ts
+            DepartamentoUIModel.ts
+        /viewmodel
+            /persona
+                GetListPersonaVM.ts
+                UpdateCreatePersonaVM.ts
+            /departamento
+                GetListDepartamentoVM.ts
+                UpdateCreateDepartamentoVM.ts
+        /view
+            /screens
+                Index.ts
+                /persona
+                    ListadoPersonas.tsx
+                    EditarCrearPersona.tsx
+                /departamento
+                    ListadoDepartamentos.tsx
+                    EditarCrearDepartamento.tsx
+            /components
+                /persona
+                    PersonaListItem.ts
+                /departamento
+                    DepartamentoListItem.ts
