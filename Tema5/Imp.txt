@@ -1,0 +1,31 @@
+npx create-expo-app --template
+npm run reset-project
+npx expo start  ó  npx expo start --tunnel
+
+InversifyJS
+npx create-expo-app@latest Nombre
+npm run reset-project
+npm install inversify reflect-metadata
+npm install --save-dev @babel/plugin-proposal-decorators
+npm install --save-dev @types/reflect-metadata @babel/plugin-proposal-decorators
+npm install --save-dev babel-plugin-transform-typescript-metadata
+npm install --save-dev @types/inversify
+npx expo customize --> babel.config.js
+
+    babel.config.js
+module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets: ['babel-preset-expo'],
+    plugins: [
+      'babel-plugin-transform-typescript-metadata',
+      ['@babel/plugin-proposal-decorators', { 'legacy': true }],
+     
+    ],
+  };
+};
+
+    tsconfig.json
+"strict": true,
+"emitDecoratorMetadata": true,
+"experimentalDecorators": true,

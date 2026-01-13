@@ -1,0 +1,149 @@
+01_ListadoPersonas
+
+/app
+    /core
+        container.ts
+        types.ts
+    /model
+        /entities
+            People.ts
+        /data
+            PeopleRepository.ts
+    /viewmodel
+        PeopleListVM.ts
+    /view
+        PeopleList.tsx
+
+
+
+03_PersonaPorDiaDeSemana
+
+/app
+    /core
+        container.ts
+        types.ts
+    /data
+        /repositories
+            PersonaRepositoryMock.ts 
+                # Implementa IPersonaRepository
+    /domain
+        /entities
+            Persona.ts
+                + id int
+                + nombre string
+                + apellidos string
+                + fechaNac datetime
+                + Persona()
+                + Persona(id int, nombre string, apellidos string, fechaNac datetime)
+        /dtos
+            PersonaDTO.ts
+                + id int
+                + nombre string
+                + apellidos string
+                + PersonaDTO()
+                + PersonaDTO(id int, nombre string, apellidos string)
+        /usecases
+            PersonaSegunDiaUseCase.ts 
+                # Implementa IPersonaSegunDiaUseCase
+                # Inyección IPersonaRepository
+                # Devuelve una persona (PersonaDTO) según el día de la semana que sea 
+        /interfaces
+            /repositories
+                IPersonaRepository.ts
+            /usecases
+                IPersonaSegunDiaUseCase.ts
+    /ui
+        /model
+        /view
+            Home.tsx
+        /viewmodel
+            HomeVM.ts  
+                # Inyecta IPersonaSegunDiaUseCase
+
+
+
+05_ListadoPersonasMayoresDeEdad
+
+/app
+    /core
+        container.ts
+        types.ts
+    /data
+        /repositories
+            PersonaRepositoryMock.ts 
+                # Implementa IPersonaRepository
+    /domain
+        /entities
+            Persona.ts
+                + id int
+                + nombre string
+                + apellidos string
+                + fechaNac datetime
+                + Persona()
+                + Persona(id int, nombre string, apellidos string, fechaNac datetime)
+        /usecases
+            ListadoPersonasMayoresDeEdadUseCase.ts
+                # Implementa IListadoPersonasMayoresDeEdadUseCase
+                # Inyección IPersonaRepository
+                # Devuelve un listado de personas con sus datos
+        /interfaces
+            /repositories
+                IPersonaRepository.ts
+            /usecases
+                IListadoPersonasMayoresDeEdadUseCase.ts
+    /ui
+        /model
+            PersonaUIModel.ts
+                # Modelo donde se enviará el nombre apellido y si es mayor de edad o no según la fechaNac
+        /view
+            Home.tsx
+        /viewmodel
+            HomeVM.ts  
+                # Inyecta IListadoPersonasMayoresDeEdadUseCase
+                # Lista de personas con su nombre y apellidos y un check a los mayores de edad (NO puede ser modificable por el usuario)
+
+
+
+06_ListadoPokemons
+
+/app
+    /core
+        container.ts
+        types.ts
+    /data
+        /repositories
+            PokemonRepositoryPokeAPI.ts
+                # Implementa IPokemonRepositoryPokeAPI
+    /domain
+        /entities
+            Pokemon.ts
+                + id int
+                + nombre stirng
+                + inf string (url)
+                + img string
+        /usecases
+            ListadoPorEdadUserUseCase.ts
+                # Implementa IListadoPorEdadUserUseCase
+                # Inyecta IPokemonRepositoryPokeAPI
+                # Devuleve un listado de pokemon según la edad del usuario 
+                # +30 todos
+                # 25-29 primera generación
+                # 22-24 segunda generación
+                # 20-21 tercera generación
+                # 18-19 cuarta generación
+                # <18 nada
+        /interfaces
+            /repositories
+                IPokemonRepositoryPokeAPI.ts
+            /usecases
+                IListadoPorEdadUserUseCase.ts
+    /ui
+        /model
+            PokemonUIModel.ts
+        /view
+            /components
+                PokemonCard.tsx     
+            ListadoPokemon.tsx
+        /viewmodel
+            ListadoPokemonVM.ts
+                # Inyección IListadoPorEdadUserUseCase
