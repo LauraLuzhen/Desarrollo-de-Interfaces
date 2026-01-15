@@ -4,38 +4,39 @@ import { PokemonUIModel } from "../../model/PokemonUIModel";
 
 interface Props {
   pokemon: PokemonUIModel;
+  width?: number; // ancho opcional para grid
 }
 
-export default function PokemonCard({ pokemon }: Props) {
+export const PokemonCard: React.FC<Props> = ({ pokemon, width }) => {
   return (
-    <View style={styles.card}>
+    <View style={[styles.card, { width: width || 120 }]}>
       <Image source={{ uri: pokemon.img }} style={styles.image} />
-      <Text style={styles.nombre}>{pokemon.nombre}</Text>
+      <Text style={styles.name}>{pokemon.nombre}</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   card: {
-    flexDirection: "row",
-    alignItems: "center",
     backgroundColor: "#FFF",
-    padding: 12,
-    marginVertical: 6,
-    marginHorizontal: 12,
+    padding: 8,
+    margin: 8,
     borderRadius: 10,
+    alignItems: "center",
     shadowColor: "#000",
     shadowOpacity: 0.1,
     shadowRadius: 4,
-    elevation: 2,
+    elevation: 3,
   },
   image: {
-    width: 50,
-    height: 50,
-    marginRight: 12,
+    width: 60,
+    height: 60,
+    marginBottom: 6,
   },
-  nombre: {
-    fontSize: 18,
+  name: {
+    fontSize: 14,
     fontWeight: "bold",
+    textTransform: "capitalize",
+    textAlign: "center",
   },
 });

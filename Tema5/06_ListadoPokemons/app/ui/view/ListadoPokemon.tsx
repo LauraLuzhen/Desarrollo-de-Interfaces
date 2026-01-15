@@ -1,52 +1,61 @@
-import React, { useEffect, useState } from "react";
-import { FlatList, SafeAreaView, Text, StyleSheet } from "react-native";
-import { listadoPokemonVM } from "../../core/container";
-import PokemonCard from "./components/PokemonCard";
-import { PokemonUIModel } from "../model/PokemonUIModel";
+import React, { useEffect } from "react";
+import { FlatList, Text, View, StyleSheet, ActivityIndicator, Dimensions } from "react-native";
+import { observer } from "mobx-react-lite";
+import { container } from "../../core/container";
+import { TYPES } from "../../core/types";
+import { ListadoPokemonVM } from "../viewmodel/ListadoPokemonVM";
+import { PokemonCard } from "./components/PokemonCard";
 
-export default function ListadoPokemon() {
-  const [pokemons, setPokemons] = useState<PokemonUIModel[]>([]);
+// Obtenemos el VM desde el container
+const listadoVM = container.get<ListadoPokemonVM>(TYPES.ListadoPokemonVM);
 
-  const edadUsuario = 26; // Cambia este valor para probar diferentes edades
+// Edad del usuario (puedes hacer que sea dinámica luego)
+const edadUsuario = 24;
+
+const screenWidth = Dimensions.get("window").width;
+const numColumns = 3;
+const cardMargin = 8;
+const cardWidth = (screenWidth - cardMargin * (numColumns * 2)) / numColumns;
+
+export const ListadoPokemon = observer(() => {
 
   useEffect(() => {
-    async function load() {
-      await listadoPokemonVM.loadPokemons(edadUsuario);
-      setPokemons(listadoPokemonVM.pokemons);
-    }
-    load();
+    listadoVM.cargarPokemons(edadUsuario);
   }, []);
 
+  if (listadoVM.cargando) {
+    return (
+      <View style={styles.cargando}>
+        <ActivityIndicator size="large" color="#007AFF" />
+        <Text>Cargando Pokémon...</Text>
+      </View>
+    );
+  }
+
+  if (listadoVM.pokemons.length === 0) {
+    return (
+      <View style={styles.cargando}>
+        <Text>No tienes Pokémon disponibles según tu edad.</Text>
+      </View>
+    );
+  }
+
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Listado de Pokémon</Text>
-      <FlatList
-        data={pokemons}
-        keyExtractor={(item, index) => index.toString()}
-        renderItem={({ item }) => <PokemonCard pokemon={item} />}
-        ListEmptyComponent={() => (
-          <Text style={styles.emptyText}>No hay Pokémon disponibles</Text>
-        )}
-      />
-    </SafeAreaView>
+    <FlatList
+      data={listadoVM.pokemons}
+      keyExtractor={(item) => item.id.toString()}
+      renderItem={({ item }) => <PokemonCard pokemon={item} width={cardWidth} />}
+      numColumns={numColumns}
+      contentContainerStyle={{ paddingHorizontal: cardMargin }}
+      showsVerticalScrollIndicator={false}
+    />
   );
-}
+});
 
 const styles = StyleSheet.create({
-  container: {
+  cargando: {
     flex: 1,
-    backgroundColor: "#F5F5F5",
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginVertical: 16,
-    textAlign: "center",
-  },
-  emptyText: {
-    textAlign: "center",
-    marginTop: 20,
-    fontSize: 16,
-    color: "#888",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });

@@ -1,19 +1,34 @@
-import { IListadoPorEdadUserUseCase } from "../interfaces/usecases/IListadoPorEdadUserUseCase";
 import { IPokemonRepositoryPokeAPI } from "../interfaces/repositories/IPokemonRepositoryPokeAPI";
+import { IListadoPorEdadUserUseCase } from "../interfaces/usecases/IListadoPorEdadUserUseCase";
 import { Pokemon } from "../entities/Pokemon";
 
 export class ListadoPorEdadUserUseCase implements IListadoPorEdadUserUseCase {
-  constructor(private pokemonRepo: IPokemonRepositoryPokeAPI) {}
 
-  async getListado(edad: number): Promise<Pokemon[]> {
+  constructor(private repository: IPokemonRepositoryPokeAPI) {}
+
+  async ejecutar(edad: number): Promise<Pokemon[]> {
+
     if (edad < 18) return [];
 
-    if (edad >= 30) return await this.pokemonRepo.getAllPokemons?.() ?? [];
+    if (edad >= 30) {
+      return this.repository.getPokemons(151, 0); // Todos (1ª gen como ejemplo)
+    }
 
-    if (edad >= 25 && edad <= 29) return await this.pokemonRepo.getPokemonPorCantidad(0);   // primera generación
-    if (edad >= 22 && edad <= 24) return await this.pokemonRepo.getPokemonPorCantidad(20);  // segunda generación
-    if (edad >= 20 && edad <= 21) return await this.pokemonRepo.getPokemonPorCantidad(40);  // tercera generación
-    if (edad >= 18 && edad <= 19) return await this.pokemonRepo.getPokemonPorCantidad(60);  // cuarta generación
+    if (edad >= 25) {
+      return this.repository.getPokemons(151, 0); // 1ª gen
+    }
+
+    if (edad >= 22) {
+      return this.repository.getPokemons(100, 151); // 2ª gen
+    }
+
+    if (edad >= 20) {
+      return this.repository.getPokemons(135, 251); // 3ª gen
+    }
+
+    if (edad >= 18) {
+      return this.repository.getPokemons(107, 386); // 4ª gen
+    }
 
     return [];
   }

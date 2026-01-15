@@ -1,5 +1,5 @@
 export const TYPES = {
   PokemonRepository: Symbol.for("PokemonRepository"),
-  ListadoPorEdadUseCase: Symbol.for("ListadoPorEdadUseCase"),
+  ListadoPorEdadUserUseCase: Symbol.for("ListadoPorEdadUserUseCase"),
   ListadoPokemonVM: Symbol.for("ListadoPokemonVM"),
 };

@@ -112,26 +112,20 @@
         types.ts
     /data
         /repositories
-            PokemonRepositoryPokeAPI.ts
+            PokemonRepository.ts
                 # Implementa IPokemonRepositoryPokeAPI
     /domain
         /entities
             Pokemon.ts
                 + id int
                 + nombre stirng
-                + inf string (url)
-                + img string
+                + Pokemon()
+                + Pokemon(id int, nombre stirng)
         /usecases
             ListadoPorEdadUserUseCase.ts
                 # Implementa IListadoPorEdadUserUseCase
                 # Inyecta IPokemonRepositoryPokeAPI
                 # Devuleve un listado de pokemon según la edad del usuario 
-                # +30 todos
-                # 25-29 primera generación
-                # 22-24 segunda generación
-                # 20-21 tercera generación
-                # 18-19 cuarta generación
-                # <18 nada
         /interfaces
             /repositories
                 IPokemonRepositoryPokeAPI.ts

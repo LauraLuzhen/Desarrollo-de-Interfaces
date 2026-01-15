@@ -1,13 +1,28 @@
-import { PokemonUIModel } from "../model/PokemonUIModel";
+import { makeAutoObservable, runInAction } from "mobx";
 import { IListadoPorEdadUserUseCase } from "../../domain/interfaces/usecases/IListadoPorEdadUserUseCase";
+import { PokemonUIModel } from "../model/PokemonUIModel";
 
 export class ListadoPokemonVM {
-  public pokemons: PokemonUIModel[] = [];
+  pokemons: PokemonUIModel[] = [];
+  cargando: boolean = false;
 
-  constructor(private listadoPorEdadUseCase: IListadoPorEdadUserUseCase) {}
+  constructor(private listadoUseCase: IListadoPorEdadUserUseCase) {
+    makeAutoObservable(this);
+  }
 
-  async loadPokemons(edad: number) {
-    const listado = await this.listadoPorEdadUseCase.getListado(edad);
-    this.pokemons = listado.map(p => new PokemonUIModel(p));
+  async cargarPokemons(edad: number) {
+    this.cargando = true;
+    const lista = await this.listadoUseCase.ejecutar(edad);
+
+    // Convertir a UIModel y asignar imágenes oficiales de PokeAPI
+    const listaUI = lista.map((p) => {
+      const imgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${p.id}.png`;
+      return new PokemonUIModel(p.id, p.nombre, imgUrl);
+    });
+
+    runInAction(() => {
+      this.pokemons = listaUI;
+      this.cargando = false;
+    });
   }
 }

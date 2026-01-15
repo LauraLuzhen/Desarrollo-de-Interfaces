@@ -1,34 +1,26 @@
 import "reflect-metadata";
 import { Container } from "inversify";
-
 import { TYPES } from "./types";
+
 import { PokemonRepository } from "../data/repositories/PokemonRepository";
-import { IPokemonRepositoryPokeAPI } from "../domain/interfaces/repositories/IPokemonRepositoryPokeAPI";
 import { ListadoPorEdadUserUseCase } from "../domain/usecases/ListadoPorEdadUserUseCase";
-import { IListadoPorEdadUserUseCase } from "../domain/interfaces/usecases/IListadoPorEdadUserUseCase";
 import { ListadoPokemonVM } from "../ui/viewmodel/ListadoPokemonVM";
 
+// Creamos un container
 const container = new Container();
 
-// Repositorios
-container.bind<IPokemonRepositoryPokeAPI>(TYPES.PokemonRepository)
-  .to(PokemonRepository)
-  .inSingletonScope();
+// Creamos la instancia del repositorio
+const pokemonRepo = new PokemonRepository();
 
-// UseCases
-container.bind<IListadoPorEdadUserUseCase>(TYPES.ListadoPorEdadUseCase)
-  .toDynamicValue((context: any) => {
-    const repo = context.container.get<IPokemonRepositoryPokeAPI>(TYPES.PokemonRepository);
-    return new ListadoPorEdadUserUseCase(repo);
-  })
-  .inSingletonScope();
+// Creamos la instancia del UseCase inyectando el repo
+const listadoUseCase = new ListadoPorEdadUserUseCase(pokemonRepo);
 
-// ViewModels
-container.bind<ListadoPokemonVM>(TYPES.ListadoPokemonVM)
-  .toDynamicValue((context: any) => {
-    const useCase = context.container.get<IListadoPorEdadUserUseCase>(TYPES.ListadoPorEdadUseCase);
-    return new ListadoPokemonVM(useCase);
-  })
-  .inSingletonScope();
+// Creamos la instancia del ViewModel inyectando el UseCase
+const listadoVM = new ListadoPokemonVM(listadoUseCase);
+
+// Bind a symbols para que puedas inyectarlos
+container.bind(TYPES.PokemonRepository).toConstantValue(pokemonRepo);
+container.bind(TYPES.ListadoPorEdadUserUseCase).toConstantValue(listadoUseCase);
+container.bind(TYPES.ListadoPokemonVM).toConstantValue(listadoVM);
 
 export { container };
