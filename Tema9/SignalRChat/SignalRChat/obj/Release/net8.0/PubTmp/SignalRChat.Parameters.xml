@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="SignalRChat20260115133659" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\ll\.rodriguez\\Desktop\\Desarrollo-de-Interfaces\\Tema9\\SignalRChat\\SignalRChat\\obj\\Release\\net8\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
