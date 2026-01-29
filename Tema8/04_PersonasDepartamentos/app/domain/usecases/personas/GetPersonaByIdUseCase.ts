@@ -4,13 +4,13 @@ import { Persona } from "../../models/Persona";
 import { IPersonaRepository } from "../../repositories/IPersonaRepository";
 
 @injectable()
-export class UpdatePersonaUseCase {
+export class GetPersonaByIdUseCase {
   constructor(
     @inject(DOMAIN_TYPES.IPersonaRepository)
     private repo: IPersonaRepository
   ) {}
 
-  async execute(persona: Persona): Promise<void> {
-    await this.repo.update(persona);
+  async execute(id: number): Promise<Persona | null> {
+    return this.repo.getById(id);
   }
 }

@@ -1,16 +1,16 @@
 import { inject, injectable } from "inversify";
-import { TYPES } from "../../../di/types";
-import { Persona } from "../../entities/Persona";
-import { IPersonaRepository } from "../../interfaces/repositories/IPersonaRepository";
-import { ICreatePersonaUseCase } from "../../interfaces/usecases/personas/ICreatePersonaUseCase";
+import DOMAIN_TYPES from "../../../di/domain.types";
+import { Persona } from "../../models/Persona";
+import { IPersonaRepository } from "../../repositories/IPersonaRepository";
 
 @injectable()
-export class CreatePersonaUseCase implements ICreatePersonaUseCase {
+export class CreatePersonaUseCase {
   constructor(
-    @inject(TYPES.IPersonaRepository) private repo: IPersonaRepository,
+    @inject(DOMAIN_TYPES.IPersonaRepository)
+    private repo: IPersonaRepository
   ) {}
 
-  async execute(persona: Persona): Promise<Persona> {
-    return await this.repo.create(persona);
+  async execute(persona: Persona): Promise<void> {
+    await this.repo.create(persona);
   }
 }

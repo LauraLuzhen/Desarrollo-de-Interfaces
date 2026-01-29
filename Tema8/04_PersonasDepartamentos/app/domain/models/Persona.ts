@@ -1,9 +1,11 @@
-export interface PersonaDTO {
+export interface Persona {
   id: number;
   nombre: string;
   apellidos: string;
   telefono: string;
   direccion: string;
-  fechaNacimiento: string;
+  fotoURL: string;
+  fechaNacimiento: Date;
   idDepartamento: number;
+  nombreDepartamento?: string;
 }

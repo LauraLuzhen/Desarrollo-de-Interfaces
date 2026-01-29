@@ -1,19 +1,22 @@
 import { inject, injectable } from "inversify";
-import { TYPES } from "../../../di/types";
-import { IPersonaRepository } from "../../interfaces/repositories/IPersonaRepository";
-import { IDeletePersonaUseCase } from "../../interfaces/usecases/personas/IDeletePersonaUseCase";
+import DOMAIN_TYPES from "../../../di/domain.types";
+import { IPersonaRepository } from "../../repositories/IPersonaRepository";
+import { FechaService } from "../../services/FechaService";
 
 @injectable()
-export class DeletePersonaUseCase implements IDeletePersonaUseCase {
+export class DeletePersonaUseCase {
   constructor(
-    @inject(TYPES.IPersonaRepository) private repo: IPersonaRepository,
+    @inject(DOMAIN_TYPES.IPersonaRepository)
+    private repo: IPersonaRepository,
+    @inject(DOMAIN_TYPES.FechaService)
+    private fechaService: FechaService
   ) {}
 
-  async execute(id: number): Promise<boolean> {
-    // Regla de negocio: domingo no se puede eliminar
-    const today = new Date().getDay();
-    if (today === 0) return false;
+  async execute(id: number): Promise<void> {
+    if (this.fechaService.esDomingo()) {
+      throw new Error("No se pueden eliminar personas en domingo.");
+    }
 
-    return await this.repo.delete(id);
+    await this.repo.delete(id);
   }
 }

@@ -4,13 +4,13 @@ import { Departamento } from "../../models/Departamento";
 import { IDepartamentoRepository } from "../../repositories/IDepartamentoRepository";
 
 @injectable()
-export class GetDepartamentosUseCase {
+export class GetDepartamentoByIdUseCase {
   constructor(
     @inject(DOMAIN_TYPES.IDepartamentoRepository)
     private repo: IDepartamentoRepository
   ) {}
 
-  async execute(): Promise<Departamento[]> {
-    return this.repo.getAll();
+  async execute(id: number): Promise<Departamento | null> {
+    return this.repo.getById(id);
   }
 }
