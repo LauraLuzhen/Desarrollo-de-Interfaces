@@ -103,28 +103,26 @@ export default function EditarPersona() {
       style={s.container}
       contentContainerStyle={{ paddingBottom: 40 }}
     >
-      <Text style={s.title}>
-        {modoEdicion ? "Editar Persona" : "Nueva Persona"}
-      </Text>
+      <Text style={s.title}>{modoEdicion ? "Edit Person" : "New Person"}</Text>
 
       <View style={s.form}>
-        <Text style={s.label}>Nombre</Text>
+        <Text style={s.label}>Name</Text>
         <TextInput
           style={s.input}
           value={persona.Nombre}
           onChangeText={(t) => setPersona({ ...persona, Nombre: t })}
-          placeholder="Nombre"
+          placeholder="Name"
         />
 
-        <Text style={s.label}>Apellidos</Text>
+        <Text style={s.label}>Surnames</Text>
         <TextInput
           style={s.input}
           value={persona.Apellidos}
           onChangeText={(t) => setPersona({ ...persona, Apellidos: t })}
-          placeholder="Apellidos"
+          placeholder="Surnames"
         />
 
-        <Text style={s.label}>Fecha de Nacimiento</Text>
+        <Text style={s.label}>Birthdate</Text>
         <TextInput
           style={s.input}
           value={persona.FechaNacimiento.split("T")[0]}
@@ -132,7 +130,7 @@ export default function EditarPersona() {
           placeholder="2000-10-10"
         />
 
-        <Text style={s.label}>Teléfono</Text>
+        <Text style={s.label}>Phone number</Text>
         <TextInput
           style={s.input}
           keyboardType="phone-pad"
@@ -140,14 +138,14 @@ export default function EditarPersona() {
           onChangeText={(t) => setPersona({ ...persona, Telefono: t })}
         />
 
-        <Text style={s.label}>Dirección</Text>
+        <Text style={s.label}>Address</Text>
         <TextInput
           style={s.input}
           value={persona.Direccion}
           onChangeText={(t) => setPersona({ ...persona, Direccion: t })}
         />
 
-        <Text style={s.label}>Departamento</Text>
+        <Text style={s.label}>Departament</Text>
         <View style={s.pickerWrapper}>
           <Picker
             selectedValue={persona.IDDepartamento}
@@ -158,7 +156,7 @@ export default function EditarPersona() {
             style={s.picker} // aquí aplicamos color de texto y padding
           >
             <Picker.Item
-              label="Seleccione un departamento..."
+              label="Select a department..."
               value={0}
               color="#999"
             />
@@ -181,12 +179,12 @@ export default function EditarPersona() {
           onPress={handleGuardar}
         >
           <Text style={s.saveBtnText}>
-            {modoEdicion ? "Guardar Cambios" : "Registrar Persona"}
+            {modoEdicion ? "Save Changes" : "Register Person"}
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={s.cancelBtn} onPress={() => router.back()}>
-          <Text style={s.cancelBtnText}>Cancelar</Text>
+          <Text style={s.cancelBtnText}>Cancel</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

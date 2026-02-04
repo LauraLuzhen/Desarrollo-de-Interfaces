@@ -76,11 +76,11 @@ export default function EditarDepartamento() {
   return (
     <ScrollView style={s.container} key={idKey}>
       <Text style={s.title}>
-        {modoEdicion ? "Editar Departamento" : "Nuevo Departamento"}
+        {modoEdicion ? "Edit Departament" : "Neew Departament"}
       </Text>
 
       <View style={s.form}>
-        <Text style={s.label}>Nombre del departamento</Text>
+        <Text style={s.label}>Department name</Text>
         <TextInput
           style={s.input}
           value={departamento.nombre}
@@ -96,7 +96,7 @@ export default function EditarDepartamento() {
           onPress={handleGuardar}
         >
           <Text style={s.saveBtnText}>
-            {modoEdicion ? "Guardar Cambios" : "Crear Departamento"}
+            {modoEdicion ? "Save Changes" : "Create Department"}
           </Text>
         </TouchableOpacity>
       </View>

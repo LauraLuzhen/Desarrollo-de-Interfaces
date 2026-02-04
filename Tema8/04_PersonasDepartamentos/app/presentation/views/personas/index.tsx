@@ -48,7 +48,7 @@ export default function ListadoPersonas() {
         style={s.addBtn}
         onPress={() => router.push("/presentation/views/personas/Edit")}
       >
-        <Text style={s.addBtnText}>+ Nueva Persona</Text>
+        <Text style={s.addBtnText}>+ New Person</Text>
       </TouchableOpacity>
 
       <FlatList
@@ -61,10 +61,10 @@ export default function ListadoPersonas() {
                 {item.Nombre} {item.Apellidos}
               </Text>
               <Text style={s.itemDepto}>
-                {item.NombreDepartamento || "Sin Departamento"}
+                {item.NombreDepartamento || "Without Department"}
               </Text>
               <Text style={s.itemAge}>
-                Edad: {vm.obtenerEdad(item.FechaNacimiento)} años
+                Age: {vm.obtenerEdad(item.FechaNacimiento)} years old
               </Text>
             </View>
 
@@ -78,7 +78,7 @@ export default function ListadoPersonas() {
                   })
                 }
               >
-                <Text style={s.btnText}>Editar</Text>
+                <Text style={s.btnText}>Edit</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
@@ -92,7 +92,7 @@ export default function ListadoPersonas() {
                   }
                 }}
               >
-                <Text style={s.btnText}>Borrar</Text>
+                <Text style={s.btnText}>Delete</Text>
               </TouchableOpacity>
             </View>
           </View>

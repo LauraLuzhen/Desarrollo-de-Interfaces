@@ -30,9 +30,9 @@ export default function DrawerNavigator() {
         },
       }}
     >
-      <Drawer.Screen name="Inicio" component={VistaPrincipal} />
-      <Drawer.Screen name="Personas" component={ListadoPersonas} />
-      <Drawer.Screen name="Departamentos" component={ListadoDepartamentos} />
+      <Drawer.Screen name="Home" component={VistaPrincipal} />
+      <Drawer.Screen name="People" component={ListadoPersonas} />
+      <Drawer.Screen name="Departaments" component={ListadoDepartamentos} />
     </Drawer.Navigator>
   );
 }

@@ -52,7 +52,7 @@ export default function ListadoDepartamentos() {
         style={s.addBtn}
         onPress={() => router.push("/presentation/views/departamentos/Edit")}
       >
-        <Text style={s.addBtnText}>Nuevo Departamento</Text>
+        <Text style={s.addBtnText}>+ New Department</Text>
       </TouchableOpacity>
 
       <FlatList
@@ -74,7 +74,7 @@ export default function ListadoDepartamentos() {
                   })
                 }
               >
-                <Text style={s.smallBtnText}>Editar</Text>
+                <Text style={s.smallBtnText}>Edit</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
@@ -89,7 +89,7 @@ export default function ListadoDepartamentos() {
                   } catch (error: any) {
                     if (
                       error.message ===
-                      "El departamento tiene personas asociadas"
+                      "The departament has associated people and cannot be deleted."
                     ) {
                       Alert.alert("No se puede eliminar", error.message);
                     } else {
@@ -98,7 +98,7 @@ export default function ListadoDepartamentos() {
                   }
                 }}
               >
-                <Text style={s.smallBtnText}>Borrar</Text>
+                <Text style={s.smallBtnText}>Delete</Text>
               </TouchableOpacity>
             </View>
           </View>

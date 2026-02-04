@@ -8,8 +8,8 @@ export default function VistaPrincipal() {
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#FFF0F5" />
 
-      <Text style={styles.title}>App</Text>
-      <Text style={styles.subtitle}>Gestión de personas y departamentos</Text>
+      <Text style={styles.title}>HotDepartamentAssigner</Text>
+      <Text style={styles.subtitle}>People and department management</Text>
     </View>
   );
 }
