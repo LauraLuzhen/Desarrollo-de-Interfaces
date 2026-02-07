@@ -1,12 +1,22 @@
 using TicTacToe.Server.Hubs;
-using TicTacToe.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// 1. Agregar servicios
 builder.Services.AddRazorPages();
-builder.Services.AddSignalR();
-builder.Services.AddSingleton<GameManager>();
+builder.Services.AddSignalR(); // Habilitar SignalR
+
+// 2. Configurar CORS para pruebas locales (Móvil + PC)
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocal", policy =>
+    {
+        policy.AllowAnyHeader()
+              .AllowAnyMethod()
+              .SetIsOriginAllowed((host) => true)
+              .AllowCredentials();
+    });
+});
 
 var app = builder.Build();
 
@@ -16,13 +26,14 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error");
 }
 app.UseStaticFiles();
-
 app.UseRouting();
 
+// 3. Aplicar la política CORS
+app.UseCors("AllowLocal");
 app.UseAuthorization();
-
 app.MapRazorPages();
 
+// 4. Mapear nuestro Hub
 app.MapHub<GameHub>("/gameHub");
 
 app.Run();

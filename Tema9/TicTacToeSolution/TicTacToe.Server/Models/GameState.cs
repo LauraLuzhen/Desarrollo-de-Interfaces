@@ -2,12 +2,14 @@
 {
     public class GameState
     {
-        public string[,] Board { get; set; } = new string[3, 3];
+        public string[] Tablero { get; set; } = new string[9];
+        public string TurnoDe { get; set; } = string.Empty;
+        public List<Player> Jugadores { get; set; } = new List<Player>();
+        public bool JuegoIniciado { get; set; } = false;
 
-        public string CurrentTurn { get; set; } = "X";
-
-        public bool IsGameOver { get; set; } = false;
-
-        public string Winner { get; set; } = null;
+        public GameState()
+        {
+            for (int i = 0; i < 9; i++) Tablero[i] = "";
+        }
     }
 }
