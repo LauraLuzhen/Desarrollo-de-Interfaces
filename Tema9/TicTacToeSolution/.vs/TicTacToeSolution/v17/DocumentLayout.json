@@ -1,38 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\",
+  "WorkspaceRootPath": "F:\\Nueva carpeta\\TicTacToeSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|c:\\users\\luzhen\\desktop\\repositorios github\\desarrollo-de-interfaces\\tema9\\tictactoesolution\\tictactoe.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|solutionrelative:tictactoe.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|f:\\nueva carpeta\\tictactoesolution\\tictactoe.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|solutionrelative:tictactoe.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|c:\\users\\luzhen\\desktop\\repositorios github\\desarrollo-de-interfaces\\tema9\\tictactoesolution\\tictactoe.server\\wwwroot\\js\\game.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|solutionrelative:tictactoe.server\\wwwroot\\js\\game.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|c:\\users\\luzhen\\desktop\\repositorios github\\desarrollo-de-interfaces\\tema9\\tictactoesolution\\tictactoe.server\\hubs\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|f:\\nueva carpeta\\tictactoesolution\\tictactoe.server\\hubs\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|solutionrelative:tictactoe.server\\hubs\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|c:\\users\\luzhen\\desktop\\repositorios github\\desarrollo-de-interfaces\\tema9\\tictactoesolution\\tictactoe.server\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|solutionrelative:tictactoe.server\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|c:\\users\\luzhen\\desktop\\repositorios github\\desarrollo-de-interfaces\\tema9\\tictactoesolution\\tictactoe.server\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|solutionrelative:tictactoe.server\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|c:\\users\\luzhen\\desktop\\repositorios github\\desarrollo-de-interfaces\\tema9\\tictactoesolution\\tictactoe.server\\models\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|f:\\nueva carpeta\\tictactoesolution\\tictactoe.server\\models\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|solutionrelative:tictactoe.server\\models\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|c:\\users\\luzhen\\desktop\\repositorios github\\desarrollo-de-interfaces\\tema9\\tictactoesolution\\tictactoe.server\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|f:\\nueva carpeta\\tictactoesolution\\tictactoe.server\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|solutionrelative:tictactoe.server\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|c:\\users\\luzhen\\desktop\\repositorios github\\desarrollo-de-interfaces\\tema9\\tictactoesolution\\tictactoe.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|solutionrelative:tictactoe.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|f:\\nueva carpeta\\tictactoesolution\\tictactoe.server\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|solutionrelative:tictactoe.server\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|f:\\nueva carpeta\\tictactoesolution\\tictactoe.server\\wwwroot\\js\\game.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|solutionrelative:tictactoe.server\\wwwroot\\js\\game.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|f:\\nueva carpeta\\tictactoesolution\\tictactoe.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|solutionrelative:tictactoe.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|f:\\nueva carpeta\\tictactoesolution\\tictactoe.server\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F01115C5-37A0-495C-9C8B-102B38010317}|TicTacToe.Server\\TicTacToe.Server.csproj|solutionrelative:tictactoe.server\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,15 +42,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\Properties\\launchSettings.json",
+              "DocumentMoniker": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "TicTacToe.Server\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\Properties\\launchSettings.json",
+              "ToolTip": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\Properties\\launchSettings.json",
               "RelativeToolTip": "TicTacToe.Server\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -61,83 +61,87 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\wwwroot\\js\\site.js",
+              "DocumentMoniker": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "TicTacToe.Server\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\wwwroot\\js\\site.js",
+              "ToolTip": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\wwwroot\\js\\site.js",
               "RelativeToolTip": "TicTacToe.Server\\wwwroot\\js\\site.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-02-07T11:43:20.418Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameState.cs",
-              "DocumentMoniker": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\Models\\GameState.cs",
-              "RelativeDocumentMoniker": "TicTacToe.Server\\Models\\GameState.cs",
-              "ToolTip": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\Models\\GameState.cs",
-              "RelativeToolTip": "TicTacToe.Server\\Models\\GameState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T11:43:04.367Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\Models\\Player.cs",
-              "RelativeDocumentMoniker": "TicTacToe.Server\\Models\\Player.cs",
-              "ToolTip": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\Models\\Player.cs",
-              "RelativeToolTip": "TicTacToe.Server\\Models\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T11:42:59.486Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\Program.cs",
-              "RelativeDocumentMoniker": "TicTacToe.Server\\Program.cs",
-              "ToolTip": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\Program.cs",
-              "RelativeToolTip": "TicTacToe.Server\\Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAuwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T11:42:51.779Z"
+              "WhenOpened": "2026-02-07T11:43:20.418Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "GameState.cs",
+              "DocumentMoniker": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\Models\\GameState.cs",
+              "RelativeDocumentMoniker": "TicTacToe.Server\\Models\\GameState.cs",
+              "ToolTip": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\Models\\GameState.cs",
+              "RelativeToolTip": "TicTacToe.Server\\Models\\GameState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T11:43:04.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Player.cs",
+              "DocumentMoniker": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\Models\\Player.cs",
+              "RelativeDocumentMoniker": "TicTacToe.Server\\Models\\Player.cs",
+              "ToolTip": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\Models\\Player.cs",
+              "RelativeToolTip": "TicTacToe.Server\\Models\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T11:42:59.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\Program.cs",
+              "RelativeDocumentMoniker": "TicTacToe.Server\\Program.cs",
+              "ToolTip": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\Program.cs",
+              "RelativeToolTip": "TicTacToe.Server\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T11:42:51.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "GameHub.cs",
-              "DocumentMoniker": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\Hubs\\GameHub.cs",
+              "DocumentMoniker": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\Hubs\\GameHub.cs",
               "RelativeDocumentMoniker": "TicTacToe.Server\\Hubs\\GameHub.cs",
-              "ToolTip": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\Hubs\\GameHub.cs",
+              "ToolTip": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\Hubs\\GameHub.cs",
               "RelativeToolTip": "TicTacToe.Server\\Hubs\\GameHub.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAwGgAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAswGoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-07T10:39:54.259Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "game.js",
-              "DocumentMoniker": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\wwwroot\\js\\game.js",
+              "DocumentMoniker": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\wwwroot\\js\\game.js",
               "RelativeDocumentMoniker": "TicTacToe.Server\\wwwroot\\js\\game.js",
-              "ToolTip": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\wwwroot\\js\\game.js",
+              "ToolTip": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\wwwroot\\js\\game.js",
               "RelativeToolTip": "TicTacToe.Server\\wwwroot\\js\\game.js",
-              "ViewState": "AgIAADEAAAAAAAAAAAAuwEUAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-02-07T10:30:34.124Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\Pages\\Index.cshtml",
+              "DocumentMoniker": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "TicTacToe.Server\\Pages\\Index.cshtml",
-              "ToolTip": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\Pages\\Index.cshtml",
+              "ToolTip": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\Pages\\Index.cshtml",
               "RelativeToolTip": "TicTacToe.Server\\Pages\\Index.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",

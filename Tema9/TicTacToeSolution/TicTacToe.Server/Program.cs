@@ -9,7 +9,7 @@ builder.Services.AddSignalR(); // Habilitar SignalR
 // 2. Configurar CORS para pruebas locales (Móvil + PC)
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocal", policy =>
+    options.AddPolicy("OpenCors", policy =>
     {
         policy.AllowAnyHeader()
               .AllowAnyMethod()
@@ -29,7 +29,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 // 3. Aplicar la política CORS
-app.UseCors("AllowLocal");
+app.UseCors("OpenCors");
 app.UseAuthorization();
 app.MapRazorPages();
 

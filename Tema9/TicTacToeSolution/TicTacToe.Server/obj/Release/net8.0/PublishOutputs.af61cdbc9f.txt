@@ -1,0 +1,7 @@
+F:\Nueva carpeta\TicTacToeSolution\TicTacToe.Server\obj\Release\net8.0\PubTmp\Out\TicTacToe.Server.exe
+F:\Nueva carpeta\TicTacToeSolution\TicTacToe.Server\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+F:\Nueva carpeta\TicTacToeSolution\TicTacToe.Server\obj\Release\net8.0\PubTmp\Out\appsettings.json
+F:\Nueva carpeta\TicTacToeSolution\TicTacToe.Server\obj\Release\net8.0\PubTmp\Out\TicTacToe.Server.dll
+F:\Nueva carpeta\TicTacToeSolution\TicTacToe.Server\obj\Release\net8.0\PubTmp\Out\TicTacToe.Server.deps.json
+F:\Nueva carpeta\TicTacToeSolution\TicTacToe.Server\obj\Release\net8.0\PubTmp\Out\TicTacToe.Server.runtimeconfig.json
+F:\Nueva carpeta\TicTacToeSolution\TicTacToe.Server\obj\Release\net8.0\PubTmp\Out\TicTacToe.Server.pdb

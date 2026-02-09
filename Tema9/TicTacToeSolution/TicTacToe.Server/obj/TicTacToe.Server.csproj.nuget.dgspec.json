@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\TicTacToe.Server.csproj": {}
+    "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\TicTacToe.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\TicTacToe.Server.csproj": {
+    "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\TicTacToe.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\TicTacToe.Server.csproj",
+        "projectUniqueName": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\TicTacToe.Server.csproj",
         "projectName": "TicTacToe.Server",
-        "projectPath": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\TicTacToe.Server.csproj",
-        "packagesPath": "C:\\Users\\LuZhen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LuZhen\\Desktop\\Repositorios GitHub\\Desarrollo-de-Interfaces\\Tema9\\TicTacToeSolution\\TicTacToe.Server\\obj\\",
+        "projectPath": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\TicTacToe.Server.csproj",
+        "packagesPath": "C:\\Users\\guill\\.nuget\\packages\\",
+        "outputPath": "F:\\Nueva carpeta\\TicTacToeSolution\\TicTacToe.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LuZhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\guill\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

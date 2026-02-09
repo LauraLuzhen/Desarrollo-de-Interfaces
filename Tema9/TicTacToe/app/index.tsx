@@ -12,7 +12,7 @@ import { useGameViewModel } from "./ui/viewmodels/GameViewModel";
 export default function App() {
   const vm = useGameViewModel();
 
-  // 🟢 Login
+  // 1. Pantalla de Login
   if (!vm.joined) {
     return (
       <View style={styles.container}>
@@ -29,15 +29,16 @@ export default function App() {
     );
   }
 
-  // 🎲 Juego
+  // 2. Pantalla de Juego (Sin espacios fantasma)
   return (
     <View style={styles.container}>
-      {" "}
       <Text style={styles.title}>TicTacToe</Text>
       <Text>Tu ficha: {vm.myToken}</Text>
       <Text style={styles.status}>{vm.status}</Text>
+      
       <View style={styles.board}>
-        {vm.board.map((cell, i) => (
+        {/* Usamos el operador ?. para evitar errores si board no ha cargado */}
+        {vm.board?.map((cell, i) => (
           <TouchableOpacity
             key={i}
             style={styles.cell}
@@ -47,6 +48,7 @@ export default function App() {
           </TouchableOpacity>
         ))}
       </View>
+
       <Button title="Volver a jugar" onPress={vm.leaveGame} />
     </View>
   );
